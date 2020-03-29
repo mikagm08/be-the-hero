@@ -5,7 +5,7 @@ exports.up = function(knex) {
         table.string('description').notNullable();
         table.decimal('value').notNullable();
 
-        table.string('ong_id').notNullable();
+        table.string('ong_id', 2).notNullable();
 
         table.foreign('ong_id').references('id').inTable('ongs');
       });
